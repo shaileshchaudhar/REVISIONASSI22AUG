@@ -1,0 +1,32 @@
+<div *ngIf="!disable">
+    <h1 class="my-2 mx-4">Employee Information</h1>
+    <div class="container">
+        <form #editForm="ngForm" (ngSubmit)="savePerson(editForm)">
+           <div class="row">
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="fill" style="width:100%;">
+                    <mat-label>Fullname</mat-label>
+                    <input matInput value="{{FullName}}">
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="fill" style="width:100%;">
+                    <mat-label>emailId</mat-label>
+                    <input matInput value="{{emailId}}">
+                  </mat-form-field> 
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="fill" style="width:100%;">
+                    <mat-label>contactnumber</mat-label>
+                    <input matInput value="{{contactnumber}}">
+                  </mat-form-field> 
+            </div>
+           </div>
+        </form>
+        <button mat-raised-button color="primary" routerLink="/Go back">Go Back</button>
+    </div>
+</div>
+<div *ngIf="disable">
+    <app-view></app-view>
+
+</div>
